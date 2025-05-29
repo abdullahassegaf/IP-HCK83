@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1748481879103" clover="3.2.0">
+  <project timestamp="1748481879103" name="All files">
+    <metrics statements="273" coveredstatements="266" conditionals="105" coveredconditionals="97" methods="34" coveredmethods="33" elements="412" coveredelements="396" complexity="0" loc="273" ncloc="273" packages="5" files="12" classes="12"/>
+    <package name="Server">
+      <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\app.js">
+        <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="Server.controllers">
+      <metrics statements="144" coveredstatements="139" conditionals="67" coveredconditionals="63" methods="17" coveredmethods="17"/>
+      <file name="authController.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\controllers\authController.js">
+        <metrics statements="29" coveredstatements="29" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
+        <line num="33" count="11" type="stmt"/>
+        <line num="34" count="11" type="stmt"/>
+        <line num="35" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="41" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="47" count="6" type="stmt"/>
+        <line num="52" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="75" count="9" type="stmt"/>
+        <line num="76" count="9" type="stmt"/>
+      </file>
+      <file name="controller.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\controllers\controller.js">
+        <metrics statements="115" coveredstatements="110" conditionals="59" coveredconditionals="55" methods="15" coveredmethods="15"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="27" count="28" type="stmt"/>
+        <line num="28" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="28" type="stmt"/>
+        <line num="30" count="28" type="stmt"/>
+        <line num="31" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="36" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="7" type="stmt"/>
+        <line num="39" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="7" type="stmt"/>
+        <line num="42" count="11" type="stmt"/>
+        <line num="45" count="7" type="stmt"/>
+        <line num="46" count="7" type="cond" truecount="3" falsecount="1"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="50" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="27" type="cond" truecount="5" falsecount="1"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="60" count="24" type="stmt"/>
+        <line num="67" count="24" type="stmt"/>
+        <line num="74" count="4" type="stmt"/>
+        <line num="78" count="13" type="stmt"/>
+        <line num="79" count="13" type="stmt"/>
+        <line num="82" count="13" type="stmt"/>
+        <line num="83" count="13" type="cond" truecount="5" falsecount="0"/>
+        <line num="84" count="6" type="stmt"/>
+        <line num="87" count="7" type="stmt"/>
+        <line num="88" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="89" count="3" type="stmt"/>
+        <line num="91" count="3" type="stmt"/>
+        <line num="95" count="10" type="stmt"/>
+        <line num="96" count="10" type="stmt"/>
+        <line num="100" count="14" type="stmt"/>
+        <line num="101" count="14" type="stmt"/>
+        <line num="102" count="14" type="stmt"/>
+        <line num="105" count="14" type="stmt"/>
+        <line num="106" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="112" count="3" type="stmt"/>
+        <line num="115" count="11" type="stmt"/>
+        <line num="116" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="117" count="2" type="stmt"/>
+        <line num="119" count="9" type="stmt"/>
+        <line num="122" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="123" count="3" type="stmt"/>
+        <line num="128" count="6" type="stmt"/>
+        <line num="129" count="6" type="stmt"/>
+        <line num="134" count="8" type="stmt"/>
+        <line num="138" count="5" type="stmt"/>
+        <line num="139" count="5" type="stmt"/>
+        <line num="140" count="5" type="stmt"/>
+        <line num="145" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="146" count="1" type="stmt"/>
+        <line num="149" count="4" type="stmt"/>
+        <line num="151" count="0" type="stmt"/>
+        <line num="155" count="10" type="stmt"/>
+        <line num="156" count="10" type="stmt"/>
+        <line num="159" count="10" type="stmt"/>
+        <line num="160" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="166" count="2" type="stmt"/>
+        <line num="169" count="8" type="stmt"/>
+        <line num="171" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="172" count="5" type="stmt"/>
+        <line num="174" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="175" count="1" type="stmt"/>
+        <line num="180" count="2" type="stmt"/>
+        <line num="182" count="2" type="stmt"/>
+        <line num="186" count="8" type="stmt"/>
+        <line num="190" count="12" type="stmt"/>
+        <line num="191" count="12" type="stmt"/>
+        <line num="192" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="193" count="2" type="stmt"/>
+        <line num="198" count="10" type="stmt"/>
+        <line num="199" count="10" type="stmt"/>
+        <line num="200" count="15" type="stmt"/>
+        <line num="205" count="10" type="stmt"/>
+        <line num="207" count="15" type="stmt"/>
+        <line num="211" count="10" type="stmt"/>
+        <line num="212" count="10" type="stmt"/>
+        <line num="213" count="10" type="stmt"/>
+        <line num="214" count="10" type="stmt"/>
+        <line num="215" count="10" type="stmt"/>
+        <line num="219" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="220" count="1" type="stmt"/>
+        <line num="227" count="10" type="stmt"/>
+        <line num="233" count="2" type="stmt"/>
+        <line num="234" count="2" type="stmt"/>
+        <line num="238" count="5" type="stmt"/>
+        <line num="239" count="5" type="stmt"/>
+        <line num="248" count="5" type="stmt"/>
+        <line num="249" count="12" type="stmt"/>
+        <line num="252" count="0" type="stmt"/>
+        <line num="256" count="3" type="stmt"/>
+        <line num="258" count="3" type="stmt"/>
+        <line num="267" count="3" type="stmt"/>
+        <line num="268" count="3" type="stmt"/>
+        <line num="271" count="0" type="stmt"/>
+        <line num="275" count="2" type="stmt"/>
+        <line num="276" count="2" type="stmt"/>
+        <line num="277" count="2" type="stmt"/>
+        <line num="280" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="281" count="0" type="stmt"/>
+        <line num="283" count="2" type="stmt"/>
+        <line num="287" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Server.helpers">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="hash.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\helpers\hash.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="16" type="stmt"/>
+        <line num="5" count="16" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+      </file>
+      <file name="jwt.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\helpers\jwt.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="16" count="122" type="stmt"/>
+      </file>
+    </package>
+    <package name="Server.middlewares">
+      <metrics statements="56" coveredstatements="56" conditionals="36" coveredconditionals="34" methods="3" coveredmethods="3"/>
+      <file name="authentication.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\middlewares\authentication.js">
+        <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="149" type="stmt"/>
+        <line num="6" count="149" type="stmt"/>
+        <line num="7" count="149" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="10" count="127" type="stmt"/>
+        <line num="11" count="127" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="14" count="119" type="stmt"/>
+        <line num="15" count="113" type="stmt"/>
+        <line num="16" count="113" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="112" type="stmt"/>
+        <line num="25" count="112" type="stmt"/>
+        <line num="27" count="37" type="stmt"/>
+      </file>
+      <file name="authorization.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\middlewares\authorization.js">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+      </file>
+      <file name="errorHandler.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\middlewares\errorHandler.js">
+        <metrics statements="33" coveredstatements="33" conditionals="26" coveredconditionals="24" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="121" type="stmt"/>
+        <line num="3" count="121" type="stmt"/>
+        <line num="4" count="121" type="stmt"/>
+        <line num="6" count="121" type="cond" truecount="10" falsecount="0"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="9" count="18" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="18" type="stmt"/>
+        <line num="13" count="26" type="stmt"/>
+        <line num="14" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="26" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="34" type="stmt"/>
+        <line num="22" count="34" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="34" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="29" count="14" type="stmt"/>
+        <line num="30" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="42" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="46" count="121" type="stmt"/>
+      </file>
+    </package>
+    <package name="Server.models">
+      <metrics statements="28" coveredstatements="26" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="9"/>
+      <file name="book.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\models\book.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+      </file>
+      <file name="favoritebook.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\models\favoritebook.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+      </file>
+      <file name="transaction.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\models\transaction.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+      </file>
+      <file name="user.js" path="C:\Users\abdul\Desktop\phase 2\Ip-hck83-p2\abdul\Server\models\user.js">
+        <metrics statements="12" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="78" count="4" type="stmt"/>
+        <line num="80" count="10" type="stmt"/>
+        <line num="82" count="4" type="stmt"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="89" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
