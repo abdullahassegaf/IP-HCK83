@@ -11,6 +11,9 @@ const initialState = {
    error: null,
    totalPages: 1,
    categories: [],
+   favoriteBooks: [], // Added for favorites
+   favoriteLoading: false, // Added for favorites
+   favoriteError: null, // Added for favorites
 };
 
 export const fetchBooks = createAsyncThunk(
@@ -54,6 +57,27 @@ export const fetchCategories = createAsyncThunk(
    }
 );
 
+// Thunk for fetching favorite books
+export const fetchFavoriteBooks = createAsyncThunk(
+   "books/fetchFavoriteBooks",
+   async (_, { rejectWithValue }) => {
+      try {
+         const token = localStorage.getItem("access_token");
+         const { data } = await axios.get(
+            `${import.meta.env.VITE_SERVER_URL}/book/favorites`, // Assuming this is the endpoint for favorites
+            {
+               headers: { Authorization: `Bearer ${token}` },
+            }
+         );
+         // Assuming the API returns an array of favorite books directly or nested under a key e.g. data.favorites
+         // Adjust data.data if your API structure is different
+         return data.data;
+      } catch (err) {
+         return rejectWithValue(err.response?.data?.message || err.message);
+      }
+   }
+);
+
 const booksSlice = createSlice({
    name: "books",
    initialState,
@@ -75,6 +99,19 @@ const booksSlice = createSlice({
          })
          .addCase(fetchCategories.fulfilled, (state, action) => {
             state.categories = action.payload;
+         })
+         // Handlers for fetchFavoriteBooks
+         .addCase(fetchFavoriteBooks.pending, (state) => {
+            state.favoriteLoading = true;
+            state.favoriteError = null;
+         })
+         .addCase(fetchFavoriteBooks.fulfilled, (state, action) => {
+            state.favoriteLoading = false;
+            state.favoriteBooks = action.payload;
+         })
+         .addCase(fetchFavoriteBooks.rejected, (state, action) => {
+            state.favoriteLoading = false;
+            state.favoriteError = action.payload;
          });
    },
 });
