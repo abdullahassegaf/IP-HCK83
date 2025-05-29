@@ -3,17 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchBooks } from "../store";
 import Card from "../Components/Card";
 import axios from "axios";
+import { showError } from "../Components/SweetAlert";
 
 export default function Home() {
    const dispatch = useDispatch();
    const { books, loading, error, totalPages } = useSelector(
       (state) => state.books
-   );
-   // State untuk search AI
+   ); // State untuk search AI
    const [aiQuery, setAiQuery] = useState("");
    const [aiLoading, setAiLoading] = useState(false);
    const [aiResult, setAiResult] = useState([]);
-   const [aiError, setAiError] = useState("");
 
    // Sidebar state
    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -86,11 +85,9 @@ export default function Home() {
       window.addEventListener("searchTerm", handleSearchEvent);
       return () => window.removeEventListener("searchTerm", handleSearchEvent);
    }, []);
-
    async function handleAiSearch(e) {
       e.preventDefault();
       setAiLoading(true);
-      setAiError("");
       setAiResult([]);
       try {
          const token = localStorage.getItem("access_token");
@@ -102,7 +99,7 @@ export default function Home() {
          );
          setAiResult(data.Books || []);
       } catch (err) {
-         setAiError(err.response?.data?.message || err.message);
+         showError(err.response?.data?.message || err.message);
       } finally {
          setAiLoading(false);
       }
@@ -243,10 +240,9 @@ export default function Home() {
                         ) : (
                            <i className="bi bi-stars"></i>
                         )}
-                        Cari AI
+                        Cari AI{" "}
                      </button>
                   </div>
-                  {aiError && <div className="text-danger mt-2">{aiError}</div>}
                </form>
                {/* Hasil AI */}
                {aiResult.length > 0 && (

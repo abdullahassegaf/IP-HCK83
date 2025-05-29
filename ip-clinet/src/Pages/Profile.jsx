@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { showSuccess, showError, showInfo } from "../Components/SweetAlert";
 
 export default function Profile() {
    const [editMode, setEditMode] = useState(false);
@@ -34,11 +35,9 @@ export default function Profile() {
             setUsername(data.data.username);
             setEmail(data.data.email);
             setToken(data.data.token);
-            // }
          } catch (err) {
             console.log(err);
-
-            alert("Gagal mengambil data profile");
+            showError("Gagal mengambil data profile");
          }
       }
       fetchProfile();
@@ -68,9 +67,9 @@ export default function Profile() {
          });
          if (!res.ok) throw new Error("Failed to update profile");
          setEditMode(false);
-         alert("Username updated!");
+         showSuccess("Username updated!");
       } catch (err) {
-         alert("Gagal update username");
+         showError("Gagal update username");
       } finally {
          setSaving(false);
       }
@@ -95,14 +94,14 @@ export default function Profile() {
          if (data.redirect_url) {
             window.open(data.redirect_url, "_blank");
             // After payment, user should refresh to see updated token
-            alert(
+            showInfo(
                "Setelah pembayaran berhasil, silakan refresh halaman untuk update token."
             );
          } else {
-            alert("Gagal mendapatkan link pembayaran");
+            showError("Gagal mendapatkan link pembayaran");
          }
       } catch (err) {
-         alert("Terjadi kesalahan saat membeli token");
+         showError("Terjadi kesalahan saat membeli token");
       } finally {
          setLoading(false);
       }

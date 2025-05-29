@@ -1,16 +1,27 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "../contexts/ThemeContext";
 
 export default function Navbar() {
    const [search, setSearch] = useState("");
-
+   const navigate = useNavigate();
+   const { isDark } = useTheme();
    function handleSearch(e) {
       e.preventDefault();
       // Kirim event global agar Home.jsx bisa listen
       window.dispatchEvent(new CustomEvent("searchTerm", { detail: search }));
    }
-
+   function handleLogout() {
+      localStorage.removeItem("access_token");
+      navigate("/login");
+   }
    return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+      <nav
+         className={`navbar navbar-expand-lg ${
+            isDark ? "navbar-dark bg-dark" : "navbar-light bg-light"
+         } mb-3`}
+      >
          <div className="container">
             <a href="/" className="navbar-brand">
                MyApp
@@ -57,11 +68,18 @@ export default function Navbar() {
                      value={search}
                      onChange={(e) => setSearch(e.target.value)}
                      style={{ minWidth: 180 }}
-                  />
+                  />{" "}
                   <button className="btn btn-outline-success" type="submit">
                      Search
                   </button>
+                  <ThemeToggle />
                </form>
+               <button
+                  className="btn btn-outline-danger ms-2"
+                  onClick={handleLogout}
+               >
+                  Logout
+               </button>
             </div>
          </div>
       </nav>

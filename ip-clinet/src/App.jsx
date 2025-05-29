@@ -8,23 +8,26 @@ import Favorites from "./Pages/Favorites";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "./Layout/Layout";
 import Detail from "./Pages/Detail";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
    return (
-      <BrowserRouter>
-         <Routes>
-            <Route path="/" element={<Layout />}>
-               <Route index element={<Home />} />
-               <Route path="profile" element={<Profile />} />
-               <Route path="favorites" element={<Favorites />} />
-               <Route path="detail/:id" element={<Detail />} />
-            </Route>
-            <Route element={<AuthLayout />}>
-               <Route path="login" element={<Login />} />
-               <Route path="register" element={<Register />} />
-            </Route>
-         </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+         <BrowserRouter>
+            <Routes>
+               <Route path="/" element={<Layout />}>
+                  <Route index element={<Home />} />
+                  <Route path="profile" element={<Profile />} />
+                  <Route path="favorites" element={<Favorites />} />
+                  <Route path="detail/:id" element={<Detail />} />
+               </Route>
+               <Route element={<AuthLayout />}>
+                  <Route path="login" element={<Login />} />
+                  <Route path="register" element={<Register />} />
+               </Route>
+            </Routes>
+         </BrowserRouter>
+      </ThemeProvider>
    );
 }
 

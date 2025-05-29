@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
+import { showSuccess, showError } from "./SweetAlert";
 
 export default function GoogleLoginButton() {
    const navigate = useNavigate();
@@ -39,10 +40,10 @@ export default function GoogleLoginButton() {
                }
             );
             localStorage.setItem("access_token", data.access_token);
-            alert("Login Google berhasil!");
+            showSuccess("Login Google berhasil!");
             navigate("/");
          } catch (err) {
-            alert(
+            showError(
                err?.response?.data?.message ||
                   "Google login failed. Please try again."
             );

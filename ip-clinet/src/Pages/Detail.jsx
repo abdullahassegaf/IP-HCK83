@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { showSuccess, showError, showInfo } from "../Components/SweetAlert";
 
 // Tambahkan Bootstrap Icons CDN ke head jika belum ada
 if (!document.getElementById("bootstrap-icons-cdn")) {
@@ -20,8 +21,6 @@ export default function Detail() {
    const [favLoading, setFavLoading] = useState(false);
    const [isFavorite, setIsFavorite] = useState(false);
    const [favoriteId, setFavoriteId] = useState(null);
-   const [favError, setFavError] = useState(null);
-   const [favMessage, setFavMessage] = useState("");
    useEffect(() => {
       async function fetchBook() {
          setLoading(true);
@@ -66,8 +65,6 @@ export default function Detail() {
    }, [id]);
    async function handleFavorite() {
       setFavLoading(true);
-      setFavError(null);
-      setFavMessage("");
 
       try {
          const token = localStorage.getItem("access_token");
@@ -80,7 +77,7 @@ export default function Detail() {
             );
             setIsFavorite(false);
             setFavoriteId(null);
-            setFavMessage("Removed from favorites!");
+            showInfo("Removed from favorites!");
          } else {
             // Add to favorites
             const response = await axios.post(
@@ -89,7 +86,7 @@ export default function Detail() {
                { headers: { Authorization: `Bearer ${token}` } }
             );
             setIsFavorite(true);
-            setFavMessage("Added to favorites!");
+            showSuccess("Added to favorites!");
 
             // Get the favoriteId from the response or re-fetch favorites
             const { data } = await axios.get(
@@ -101,16 +98,8 @@ export default function Detail() {
                setFavoriteId(favorite.id);
             }
          }
-
-         // Clear message after 3 seconds
-         setTimeout(() => {
-            setFavMessage("");
-         }, 3000);
       } catch (err) {
-         setFavError(err.response?.data?.message || err.message);
-         setTimeout(() => {
-            setFavError(null);
-         }, 5000);
+         showError(err.response?.data?.message || err.message);
       } finally {
          setFavLoading(false);
       }
@@ -195,36 +184,13 @@ export default function Detail() {
                         {book.price?.toLocaleString() || 0}
                      </p>
                      <hr />
-                     <h5>Summary</h5>
+                     <h5>Summary</h5>{" "}
                      <p
                         className="text-secondary"
                         style={{ fontSize: "1.1rem" }}
                      >
                         {book.summary}
-                     </p>{" "}
-                     {favError && (
-                        <div className="alert alert-danger mt-2" role="alert">
-                           <i className="bi bi-exclamation-triangle me-2"></i>
-                           {favError}
-                        </div>
-                     )}
-                     {favMessage && (
-                        <div
-                           className={`alert ${
-                              isFavorite ? "alert-success" : "alert-info"
-                           } mt-2`}
-                           role="alert"
-                        >
-                           <i
-                              className={`bi ${
-                                 isFavorite
-                                    ? "bi-check-circle"
-                                    : "bi-info-circle"
-                              } me-2`}
-                           ></i>
-                           {favMessage}
-                        </div>
-                     )}
+                     </p>
                   </div>
                </div>
             </div>
